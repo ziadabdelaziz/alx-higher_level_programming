@@ -1,4 +1,4 @@
-#!/usr/bin/pyton3
+#!/usr/bin/python3
 if __name__ == "__main__":
     import importlib
     module = importlib.import_module("hidden_4")
