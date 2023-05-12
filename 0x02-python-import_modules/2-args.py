@@ -9,7 +9,7 @@ if __name__ == "__main__":
     elif len == 2:
         print("{:d} argument:".format(len - 1))
     else:
-        print("{:d} argument:".format(len - 1))
+        print("{:d} arguments:".format(len - 1))
 
     if len >= 2:
         for i in range(1, len):
