@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    max = -99999999999999
-
-    if len(a_dictionary) == 0:
+    max = float('-inf')
+    
+    if not a_dictionary:
         return None
 
     for key in a_dictionary:
