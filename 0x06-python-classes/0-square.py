@@ -4,6 +4,7 @@ This is module-level documentation
 In this module has one empty class names Square
 """
 
+
 class Square:
     """
     This is an empty class named Square
