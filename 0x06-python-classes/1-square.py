@@ -11,16 +11,11 @@ class Square:
     Has a private attribute 'size'
     """
 
-    __size = 0
+    __size = None
 
-    def __init__(self, size=0):
+    def __init__(self, size):
         """
-        Instantiate 'size' attribute safely
+        Instantiate 'size' attribute
         """
 
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
+        self.__size = size
