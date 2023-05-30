@@ -11,14 +11,12 @@ class Square:
     Has a private attribute 'size'
     """
 
-    __size = 0
-
     def __init__(self, size=0):
         """
         Instantiate 'size' attribute safely
         """
 
-        size(size)
+        self.size = size
 
     def area(self):
         """
@@ -27,6 +25,7 @@ class Square:
 
         return self.__size * self.__size
 
+    @property
     def size(self):
         """
         Getter function for 'size'
@@ -34,6 +33,7 @@ class Square:
 
         return self.__size
 
+    @size.setter
     def size(self, value):
         """
         Setter function for 'size'
