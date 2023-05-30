@@ -9,4 +9,7 @@ class Square:
     This is an empty class named Square
     """
     def __init__(self):
+        """
+        This is an empty init function
+        """
         pass
