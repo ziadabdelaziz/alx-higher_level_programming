@@ -18,7 +18,7 @@ class Square:
         Instantiate 'size' attribute safely
         """
 
-        size(self, size)
+        size(size)
 
     def area(self):
         """
