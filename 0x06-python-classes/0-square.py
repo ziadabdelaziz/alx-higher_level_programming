@@ -8,4 +8,5 @@ class Square:
     """
     This is an empty class named Square
     """
-    pass
+    def __init__(self):
+        pass
