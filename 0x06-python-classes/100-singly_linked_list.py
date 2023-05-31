@@ -74,7 +74,6 @@ class SinglyLinkedList:
         """
         cur = self.__head
         singly_linked_list = ''
-        print(cur)
         while (cur):
             singly_linked_list += str(cur.data)
             cur = cur.next_node
