@@ -58,7 +58,7 @@ class Node:
 class SinglyLinkedList:
     """
     Singly linked list class
-    with list of nodes 
+    with list of nodes
     """
 
     def __init__(self):
