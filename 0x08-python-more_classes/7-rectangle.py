@@ -37,6 +37,13 @@ class Rectangle:
                 rectangle += '\n'
 
         return rectangle
+    
+    def __del__(self):
+        """
+        print message when deleted
+        """
+        
+        print("Bye rectangle...")
 
     @property
     def width(self):
