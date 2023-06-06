@@ -9,6 +9,8 @@ class Rectangle:
     rectangle
     """
 
+    print_symbol = '#'
+
     def __init__(self, width=0, height=0):
         """
         instanciate the rectangle with
@@ -30,7 +32,7 @@ class Rectangle:
         rectangle = ''
         for i in range(self.height):
             for _ in range(self.width):
-                rectangle += '#'
+                rectangle += str(self.print_symbol)
             if i != self.height - 1:
                 rectangle += '\n'
 
