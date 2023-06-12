@@ -2,6 +2,8 @@
 """
 lookup function
 """
+
+
 def lookup(obj):
     """
     return list of corresponding attributes and methods
