@@ -10,11 +10,12 @@ class Rectangle(BaseGeometry):
     inherits BaseGeometry
     """
 
-    def __init__(slef, width, height):
+    def __init__(self, width, height):
         """
         initialize width and height
         """
-        pass
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
