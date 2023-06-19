@@ -83,3 +83,14 @@ class Base:
             return json.loads(json_string)
         else:
             return []
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        return Rectangle instance
+        from dictionary
+        """
+
+        rectangle = cls(2, 1)
+        rectangle.update(**dictionary)
+        return rectangle
