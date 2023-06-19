@@ -2,6 +2,7 @@
 """
 This module includes the base class
 """
+import json
 
 
 class Base:
@@ -42,3 +43,12 @@ class Base:
             raise TypeError("Error: value must be an integer")
         else:
             self.__nb_objects = value
+
+    def to_json_string(list_dictionaries):
+        """
+        return json representation
+        of list_dictionaries
+        """
+
+        if list_dictionaries and len(list_dictionaries):
+            return json.dumps(list_dictionaries)
