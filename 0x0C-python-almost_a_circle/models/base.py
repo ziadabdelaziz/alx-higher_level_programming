@@ -82,4 +82,4 @@ class Base:
         if json_string and len(json_string):
             return json.loads(json_string)
         else:
-            return ''
+            return []
