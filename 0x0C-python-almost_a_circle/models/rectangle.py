@@ -133,18 +133,22 @@ class Rectangle(Base):
                     print(end="#")
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         update the rectangle attributes
         """
 
         attributes = ['id', 'width', 'height', 'x', 'y']
-
-        for i, value in enumerate(args):
-            if i < len(attributes):
-                setattr(self, attributes[i], value)
-            else:
-                break
+        if args and len(args):    
+            for i, value in enumerate(args):
+                if i < len(attributes):
+                    setattr(self, attributes[i], value)
+                else:
+                    break
+        else:
+            for key, value in kwargs.items():
+                if key in attributes:
+                    setattr(self, key, value)
 
     def __str__(self):
         """
