@@ -112,7 +112,7 @@ class Base:
         try:
             with open(file_name, 'r', encoding='utf-8') as file:
                 file_string = file.read()
-        except FileExistsError:
+        except FileNotFoundError:
             return []
 
         list_objs = cls.from_json_string(file_string)
