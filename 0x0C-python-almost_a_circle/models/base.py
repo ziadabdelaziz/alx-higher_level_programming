@@ -63,11 +63,11 @@ class Base:
         to file
         """
 
-        file_name = f"{cls}.json"
+        file_name = f"{cls.__name__}.json"
         list_dictionaries = []
         if list_objs is not None:
             list_dictionaries = [obj.to_dictionary() for obj in list_objs]
-        
+
         list_json = Base.to_json_string(list_dictionaries)
         with open(file_name, 'w', encoding='utf-8') as file:
             file.write(list_json)
