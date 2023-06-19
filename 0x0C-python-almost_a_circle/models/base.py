@@ -20,7 +20,7 @@ class Base:
         if id:
             self.id = id
         else:
-            self.nb_objects += 1
+            Base.nb_objects = self.nb_objects + 1
             self.id = self.nb_objects
 
     @property
