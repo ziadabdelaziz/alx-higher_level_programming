@@ -133,6 +133,19 @@ class Rectangle(Base):
                     print(end="#")
             print()
 
+    def update(self, *args):
+        """
+        update the rectangle attributes
+        """
+
+        attributes = ['id', 'width', 'height', 'x', 'y']
+
+        for i, value in enumerate(args):
+            if i < len(attributes):
+                setattr(self, attributes[i], value)
+            else:
+                break
+
     def __str__(self):
         """
         Edit str method
@@ -140,5 +153,7 @@ class Rectangle(Base):
         width and height
         """
 
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y}\
-               - {self.width}/{self.height}"
+        representation = f"[Rectangle] ({self.id}) {self.x}/{self.y} "\
+            + f"- {self.width}/{self.height}"
+
+        return representation
