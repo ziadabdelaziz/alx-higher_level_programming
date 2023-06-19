@@ -52,3 +52,5 @@ class Base:
 
         if list_dictionaries and len(list_dictionaries):
             return json.dumps(list_dictionaries)
+        else:
+            return "[]"
