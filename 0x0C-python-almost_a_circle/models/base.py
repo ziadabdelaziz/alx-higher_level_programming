@@ -91,6 +91,11 @@ class Base:
         from dictionary
         """
 
-        rectangle = cls(2, 1)
-        rectangle.update(**dictionary)
-        return rectangle
+        instance = None
+        if cls.__name__ == "Rectangle":
+            instance = cls(2, 1)
+        else:
+            instance = cls(1)
+
+        instance.update(**dictionary)
+        return instance
