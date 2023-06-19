@@ -122,9 +122,15 @@ class Rectangle(Base):
         to stdout
         """
 
-        for _ in range(self.height):
-            for _ in range(self.width):
-                print(end="#")
+        for i in range(self.height + self.y):
+            if i < self.y:
+                print()
+                continue
+            for j in range(self.width + self.x):
+                if j < self.x:
+                    print(end=" ")
+                else:
+                    print(end="#")
             print()
 
     def __str__(self):
@@ -134,4 +140,5 @@ class Rectangle(Base):
         width and height
         """
 
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y}\
+               - {self.width}/{self.height}"
