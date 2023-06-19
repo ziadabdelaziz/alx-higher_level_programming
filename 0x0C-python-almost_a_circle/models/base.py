@@ -55,7 +55,7 @@ class Base:
             return json.dumps(list_dictionaries)
         else:
             return "[]"
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
         """
@@ -71,3 +71,15 @@ class Base:
         list_json = Base.to_json_string(list_dictionaries)
         with open(file_name, 'w', encoding='utf-8') as file:
             file.write(list_json)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        return json representation of
+        json string
+        """
+
+        if json_string and len(json_string):
+            return json.loads(json_string)
+        else:
+            return ''
