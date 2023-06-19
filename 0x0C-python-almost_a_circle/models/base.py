@@ -44,6 +44,7 @@ class Base:
         else:
             self.__nb_objects = value
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """
         return json representation
