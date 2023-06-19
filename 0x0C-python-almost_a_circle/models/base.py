@@ -3,6 +3,7 @@
 This module includes the base class
 """
 import json
+import csv
 
 
 class Base:
@@ -120,5 +121,45 @@ class Base:
         list_instances = list()
         for obj in list_objs:
             list_instances.append(cls.create(**obj))
+
+        return list_instances
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        saves list of objects
+        to csv file
+        """
+
+        file_name = f"{cls.__name__}.csv"
+
+        list_dictionaries = None
+        if list_objs is not None:
+            list_dictionaries = [obj.to_dictionary() for obj in list_objs]
+
+        keys = list_dictionaries[0].keys()
+        with open(file_name, 'w', encoding="utf-8", newline='\n') as file:
+            writer = csv.DictWriter(file, fieldnames=keys)
+            writer.writeheader()
+            writer.writerows(list_dictionaries)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        load objects from csv file
+        """
+
+        file_name = f"{cls.__name__}.csv"
+        list_instances = []
+        try:
+            with open(file_name, 'r', encoding='utf-8', newline='\n') as file:
+                reader = csv.DictReader(file)
+                print(reader)
+                for row in reader:
+                    for key, value in row.items():
+                        row[key] = int(value)
+                    list_instances.append(cls.create(**row))
+        except FileNotFoundError:
+            return list_instances
 
         return list_instances
