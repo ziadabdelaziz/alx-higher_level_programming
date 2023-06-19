@@ -115,3 +115,14 @@ class Rectangle(Base):
         """
 
         return self.width * self.height
+
+    def display(self):
+        """
+        print the rectangle of "#"s
+        to stdout
+        """
+
+        for _ in range(self.height):
+            for _ in range(self.width):
+                print(end="#")
+            print()
