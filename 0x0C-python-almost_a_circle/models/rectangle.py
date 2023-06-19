@@ -139,7 +139,7 @@ class Rectangle(Base):
         """
 
         attributes = ['id', 'width', 'height', 'x', 'y']
-        if args and len(args):    
+        if args and len(args):
             for i, value in enumerate(args):
                 if i < len(attributes):
                     setattr(self, attributes[i], value)
