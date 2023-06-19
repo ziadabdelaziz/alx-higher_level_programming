@@ -126,3 +126,12 @@ class Rectangle(Base):
             for _ in range(self.width):
                 print(end="#")
             print()
+
+    def __str__(self):
+        """
+        Edit str method
+        to return rectangle id, (x, y) coordinates
+        width and height
+        """
+
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
