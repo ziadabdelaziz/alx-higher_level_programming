@@ -4,6 +4,7 @@ This module includes the base class
 """
 import json
 import csv
+import turtle
 
 
 class Base:
@@ -163,3 +164,39 @@ class Base:
             return list_instances
 
         return list_instances
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        draw a list of rectangles and squares
+        """
+
+        print("yub")
+        turtle.penup()
+        for rectangle in  list_rectangles:
+            turtle.goto(rectangle.x, rectangle.y)
+            turtle.pendown()
+            turtle.forward(rectangle.width)
+            turtle.right(90)
+            turtle.forward(rectangle.height)
+            turtle.right(90)
+            turtle.forward(rectangle.width)
+            turtle.right(90)
+            turtle.forward(rectangle.height)
+            turtle.right(90)
+            turtle.penup()
+
+        for square in  list_squares:
+            turtle.goto(square.x, square.y)
+            turtle.pendown()
+            turtle.forward(square.width)
+            turtle.right(90)
+            turtle.forward(square.height)
+            turtle.right(90)
+            turtle.forward(square.width)
+            turtle.right(90)
+            turtle.forward(square.height)
+            turtle.right(90)
+            turtle.penup()
+
+        turtle.done()
