@@ -155,7 +155,6 @@ class Base:
         try:
             with open(file_name, 'r', encoding='utf-8', newline='\n') as file:
                 reader = csv.DictReader(file)
-                print(reader)
                 for row in reader:
                     for key, value in row.items():
                         row[key] = int(value)
