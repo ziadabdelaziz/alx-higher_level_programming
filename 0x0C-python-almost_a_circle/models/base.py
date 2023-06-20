@@ -134,7 +134,7 @@ class Base:
 
         file_name = f"{cls.__name__}.csv"
 
-        list_dictionaries = None
+        list_dictionaries = []
         if list_objs is not None:
             list_dictionaries = [obj.to_dictionary() for obj in list_objs]
 
@@ -173,7 +173,7 @@ class Base:
 
         print("yub")
         turtle.penup()
-        for rectangle in  list_rectangles:
+        for rectangle in list_rectangles:
             turtle.goto(rectangle.x, rectangle.y)
             turtle.pendown()
             turtle.forward(rectangle.width)
@@ -186,7 +186,7 @@ class Base:
             turtle.right(90)
             turtle.penup()
 
-        for square in  list_squares:
+        for square in list_squares:
             turtle.goto(square.x, square.y)
             turtle.pendown()
             turtle.forward(square.width)
