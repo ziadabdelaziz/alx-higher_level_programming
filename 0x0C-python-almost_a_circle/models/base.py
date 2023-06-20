@@ -171,32 +171,15 @@ class Base:
         draw a list of rectangles and squares
         """
 
-        print("yub")
         turtle.penup()
-        for rectangle in list_rectangles:
-            turtle.goto(rectangle.x, rectangle.y)
+        for shape in list_rectangles + list_squares:
+            turtle.goto(shape.x, shape.y)
             turtle.pendown()
-            turtle.forward(rectangle.width)
-            turtle.right(90)
-            turtle.forward(rectangle.height)
-            turtle.right(90)
-            turtle.forward(rectangle.width)
-            turtle.right(90)
-            turtle.forward(rectangle.height)
-            turtle.right(90)
-            turtle.penup()
-
-        for square in list_squares:
-            turtle.goto(square.x, square.y)
-            turtle.pendown()
-            turtle.forward(square.width)
-            turtle.right(90)
-            turtle.forward(square.height)
-            turtle.right(90)
-            turtle.forward(square.width)
-            turtle.right(90)
-            turtle.forward(square.height)
-            turtle.right(90)
+            for _ in range(2):
+                turtle.forward(shape.width)
+                turtle.right(90)
+                turtle.forward(shape.height)
+                turtle.right(90)
             turtle.penup()
 
         turtle.done()
